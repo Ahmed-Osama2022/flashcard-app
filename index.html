@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>FlashCard App</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light shadow">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Flashcard Game</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Celebration Animation -->
+    <div class="confetti" id="confetti">
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+    </div>
+    <!-- =================================== -->
+
+    <div class="container-sm mt-5 gallery ">
+        <div class="img-wrapper m-auto d-flex justify-content-center " id="img-wrapper">
+            <img src="./assets/monkey.png" class="img-fluid" alt="monkey-photo">
+        </div>
+
+        <!-- Click Sounds -->
+        <div>
+            <audio id="click-sound-next">
+                <source src="./assets/clickSound-next.mp3" type="audio/mpeg">
+            </audio>
+
+            <audio id="click-sound-prev">
+                <source src="./assets/clickSound-prev.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <!-- End Click Sounds -->
+
+        <div class="buttons-wrapper d-flex justify-content-around gap-3 my-4">
+            <button class="btn btn-danger nav-btns  d-flex flex-nowrap align-items-center py-3"
+                onclick="playClickSound('next')">
+                <ion-icon name="caret-back-outline" class="fs-3"></ion-icon>
+                <p class="m-auto">Previous</p>
+            </button>
+            <button class="btn btn-success nav-btns  d-flex flex-nowrap align-items-center py-3"
+                onclick="playClickSound('prev')">
+                <p class="m-auto">Next</p>
+                <ion-icon name="caret-forward-outline" class="fs-3"></ion-icon>
+            </button>
+        </div>
+    </div>
+
+
+    <!-- ===================== JS ===================== -->
+    <script src="./js/all.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
